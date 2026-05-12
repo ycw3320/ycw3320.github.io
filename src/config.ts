@@ -13,7 +13,7 @@ export const SITE = {
   showBackButton: true, // show back button in post detail
   editPost: {
     enabled: true,
-    text: "Edit page",
+    text: "수정하기",
     url: "https://github.com/ycw3320/ycw3320.github.io/edit/main/",
   },
   dynamicOgImage: true,
