@@ -61,12 +61,20 @@ export default defineConfig({
     preserveScriptOrder: true,
     fonts: [
       {
+        name: "Inter",
+        cssVariable: "--font-inter",
+        provider: fontProviders.google(),
+        fallbacks: ["system-ui", "-apple-system", "sans-serif"],
+        weights: [300, 400, 500, 600, 700],
+        styles: ["normal"],
+      },
+      {
         name: "Google Sans Code",
         cssVariable: "--font-google-sans-code",
         provider: fontProviders.google(),
         fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
-        styles: ["normal", "italic"],
+        weights: [400, 500],
+        styles: ["normal"],
       },
     ],
   },
