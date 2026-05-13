@@ -8,9 +8,10 @@
 - **소유자**: ycw3320
 
 ## 기술 스택
-- **프레임워크**: Astro v5 (정적 사이트 생성)
+- **프레임워크**: Astro v5.18 (정적 사이트 생성)
 - **템플릿**: AstroPaper v5.5.1
-- **스타일**: Tailwind CSS v4 (`@tailwindcss/vite` 플러그인)
+- **스타일**: Tailwind CSS v4 (`@tailwindcss/vite` 플러그인) + @tailwindcss/typography
+- **폰트**: Inter (본문), Google Sans Code (코드) — Astro 실험적 폰트 API
 - **언어**: TypeScript
 - **검색**: Pagefind (빌드 후 정적 인덱스 생성)
 - **OG 이미지**: Satori + Sharp (동적 생성)
@@ -37,12 +38,12 @@ src/
 ├── config.ts          # SITE 전역 설정 (URL, 제목, 저자, 언어, 타임존 등)
 ├── constants.ts       # SOCIALS 링크, SHARE_LINKS
 ├── data/blog/         # 블로그 포스트 (.md 파일)
-│   ├── examples/      # 예제 포스트
-│   └── _releases/     # AstroPaper 릴리즈 노트 (정리 대상)
+│   └── hello-world.md # 첫 글 "블로그를 시작하며"
 ├── components/        # Astro/React 컴포넌트
 ├── layouts/           # 페이지 레이아웃
 ├── pages/             # 라우팅 페이지 (.astro)
-├── styles/            # 전역 스타일
+│   └── about.md       # 소개 페이지
+├── styles/            # 전역 스타일 (global.css, typography.css)
 └── utils/             # 유틸리티 (슬러그, OG 템플릿, 포스트 필터 등)
 ```
 
@@ -62,8 +63,12 @@ src/
 - [x] 리포 생성 및 GitHub Pages 배포 완료
 - [x] 사이트 정보 개인화 (config.ts, constants.ts)
 - [x] GitHub Actions 자동 배포 워크플로 구성
-- [ ] 샘플 포스트 정리 — `src/data/blog/` 의 AstroPaper 기본 포스트 삭제 또는 교체
-- [ ] About 페이지 작성
+- [x] 샘플 포스트 정리 및 첫 글 작성 (hello-world.md)
+- [x] UI 텍스트 전체 한국어화 (17개 파일)
+- [x] 미니멀 모던 디자인 리뉴얼 (색상, 폰트, 코드 블록)
+- [x] 히어로 섹션 텍스트 중심 리디자인
+- [x] 소개(About) 페이지 작성
+- [x] UI 용어 "글" → "게시글"로 통일
 - [ ] OG 이미지 교체 (`public/astropaper-og.jpg`)
 - [ ] 커스텀 도메인 연결 (선택)
 - [ ] Giscus 댓글 시스템 연동 (선택)
